@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:#b9f1e3">
+
+<div class="container">
+ 
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">PIM HOME</a></li>
+    <li><a data-toggle="tab" href="#menu1">ACES</a></li>
+    <li><a data-toggle="tab" href="#menu2">NAPA</a></li>
+    <li><a data-toggle="tab" href="#menu3">WIX</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>HOME</h3>
+      <p>Edit Page </p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <div class="col-sm-9 col-md-10" style="background-color:#b9f1e3;min-height:745px;">
+                <div id="section1" class="container-fluid">
+ 
+                    <br />
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter SKUI ID">
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+ 
+                </div>
+                <br />
+                
+                <div style="margin-left:25px;padding-top:10px;">
+                   <div class="form-group" id="form">
+                       <div class="form-horizontal">
+                           <div class="form-group">
+                               <label class="control-label col-sm-2" for="email">SKUI ID</label>
+                               <div class="col-sm-6">
+                                   <input type="text" class="form-control" id="SKUIID" placeholder="SKUI ID" value="01" disabled>
+                               </div>
+                           </div>
+                           <div class="form-group">
+                               <label class="control-label col-sm-2" for="pwd">Brand:</label>
+                               <div class="col-sm-6">
+                                   <input type="text" class="form-control" id="Brand" placeholder="Brand" value="BMW" disabled>
+                               </div>
+                           </div>
+                           <div class="form-group">
+                               <label class="control-label col-sm-2" for="pwd">Country:</label>
+                               <div class="col-sm-6">
+                                   <input type="text" class="form-control" id="country" placeholder="Country" value="India" disabled>
+                               </div>
+                           </div>
+                           <div class="form-group">
+                               <label class="control-label col-sm-2" for="pwd">Status:</label>
+                               <div class="col-sm-6">
+                                   <input type="text" class="form-control" id="pwd" placeholder="Status" value="Out-dated" disabled>
+                               </div>
+                           </div>
+                           <div class="form-group">
+                               <div class="col-sm-offset-2 col-sm-10">
+                                   <button type="button" id="Edit" class="btn btn-warning" >Edit</button>
+                                   <button type="button" class="btn btn-info" disabled>Save</button>
+                                   <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal" disabled>Submit</button>
+ 
+                               </div>
+                           </div>   
+ 
+                           <!--modal-->
+                           <div class="modal fade" id="myModal" role="dialog">
+                               <div class="modal-dialog">
+ 
+                                   <!-- Modal content-->
+                                   <div class="modal-content">
+                                       <div class="modal-header">
+                                           <button type="button" class="close" data-dismiss="modal"></button>
+                                           <h4 class="modal-title">Confirm</h4>
+                                       </div>
+                                       <div class="modal-body">
+                                           <p>Do you want to Submit ??</p>
+                                       </div>
+                                       <div class="modal-footer">
+                                           <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                           <button type="button" class="btn btn-success">Yes</button>
+                                       </div>
+                                   </div>
+ 
+                               </div>
+                           </div>                                    
+    </div>
+    <div id="menu3" class="tab-pane fade">
+     
+    </div>
+  </div>
+</div>
+</div>
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        function test() {
+            $('#entry1').click(function te() {
+                $('#section2').hide();
+            });
+        }
+       // $("#ex2").slider({});
+
+        // Without JQuery
+       // var slider = new Slider('#ex2', {});
+
+      
+        //$('#Edit').click(function () {
+        //    debugger;
+        //        //$("#name").attr("readonly", false);
+        //        //$('#SKUIID').attr()
+        //        $("#SKUIID").removeAttr("disabled")
+        //        $("#Brand").removeAttr("disabled")
+        //        $("#country").removeAttr("disabled")
+        //        $("#pwd").removeAttr("disabled")
+        //        var allControls = $(this).find(':input');
+                
+        //})
+        $("#Edit").click(function () {
+            debugger;
+            $(this).closest('#form').find("input[type=text],[type=button],[type=submit]").removeAttr("disabled");
+        });
+           
+    </script>
+
+
+</body>
+</html>
